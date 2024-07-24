@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>rspace-repository-spi</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 
 	<name>RSpace Repository SPI</name>
 	<description>Service provider interface (SPI) for RSpace repository plugins</description>
@@ -14,14 +14,17 @@
 		<version>2.0.1</version>
 	</parent>
 
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-toolchains-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
