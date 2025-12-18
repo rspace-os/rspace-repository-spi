@@ -15,12 +15,7 @@ import com.researchspace.repository.spi.properties.RepoProperty;
  */
 public interface RepositoryConfigurer {
 
-	RepositoryConfigurer NULL_OPS = new RepositoryConfigurer() {
-		@Override
-		public List<Subject> getSubjects() {
-			return Collections.emptyList();
-		}
-	};
+	RepositoryConfigurer NULL_OPS = Collections::emptyList;
 
 	/**
 	 * Gets a list of possible subjects/categories for this repository

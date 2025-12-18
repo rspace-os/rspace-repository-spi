@@ -21,6 +21,5 @@ public class BooleanRepoPropertyTest {
 	private NumberRepoProperty createNumberRepoProperty() {
 		return new NumberRepoProperty("any", true, 23);
 	}
-	
 
 }

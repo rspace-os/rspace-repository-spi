@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -30,12 +30,12 @@ public class TestRepoConfigurerTest {
 	TestRepoConfigurer configurer = new TestRepoConfigurer();
 
 	@BeforeEach
-	public void setUp() throws Exception {
+	public void setUp() {
 		configurer = new TestRepoConfigurer();
 	}
 
 	@AfterEach
-	public void tearDown() throws Exception {
+	public void tearDown() {
 	}
 
 	@Test
@@ -64,11 +64,11 @@ public class TestRepoConfigurerTest {
 		assertHasPropertyOfType(configurer.getOtherProperties(), STRING);
 		assertHasPropertyOfType(configurer.getOtherProperties(), LIST);
 
-		assertTrue(getPropertyStream().filter(e -> e.isBooleanType()).findFirst().get().getBoolean());
+		assertTrue(getPropertyStream().filter(RepoProperty::isBooleanType).findFirst().get().getBoolean());
 		assertFalse(
-				StringUtils.isBlank(getPropertyStream().filter(e -> e.isStringType()).findFirst().get().getString()));
-		assertTrue(getPropertyStream().filter(e -> e.isNumberType()).findFirst().get().getNumber() > 0);
-		assertTrue(getPropertyStream().filter(e -> e.isListType()).findFirst().get().getList().size() > 0);
+				StringUtils.isBlank(getPropertyStream().filter(RepoProperty::isStringType).findFirst().get().getString()));
+		assertTrue(getPropertyStream().filter(RepoProperty::isNumberType).findFirst().get().getNumber() > 0);
+		assertTrue(getPropertyStream().filter(RepoProperty::isListType).findFirst().get().getList().size() > 0);
 
 	}
 
@@ -81,7 +81,7 @@ public class TestRepoConfigurerTest {
 	}
 
 	private ListRepoProperty createAListProperty(String name) {
-		List<String> choices = Arrays.asList(new String[] { "c1", "c2" });
+		List<String> choices = Arrays.asList("c1", "c2");
 		return new ListRepoProperty(name, false, choices);
 	}
 

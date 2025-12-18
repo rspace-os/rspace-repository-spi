@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class StringRepoProperty extends RepoProperty{
 
 	private String possibleValue;
-	private boolean stringType = true;
 
 	public StringRepoProperty(String name, boolean required, String possibleValue) {
 		super(name, RepositoryPropertyType.STRING, required);
@@ -25,7 +24,7 @@ public class StringRepoProperty extends RepoProperty{
 	}
 	
 	public boolean isStringType () {
-		return stringType;
+		return true;
 	}
 	
 	@JsonIgnore

@@ -22,7 +22,7 @@ public class ListRepoPropertyTest {
 	}
 
 	private ListRepoProperty createListRepoProperty() {
-		return new ListRepoProperty("any", true, Arrays.asList(new String []{"a", "b"}));
+		return new ListRepoProperty("any", true, Arrays.asList("a", "b"));
 	}
 	
 

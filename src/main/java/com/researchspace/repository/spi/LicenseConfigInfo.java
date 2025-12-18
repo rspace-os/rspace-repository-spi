@@ -3,7 +3,7 @@ package com.researchspace.repository.spi;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.Validate;
+import org.apache.commons.lang3.Validate;
 
 import lombok.Value;
 

@@ -39,7 +39,7 @@ public class SubmissionMetadata {
 	private Optional<String> licenseName;
 
 	/**
-	 * An optonal DIO for a Data Management Plan that is associated with the
+	 * An optional DIO for a Data Management Plan that is associated with the
 	 * document being submitted.
 	 */
 	private Optional<String> dmpDoi = Optional.empty();
