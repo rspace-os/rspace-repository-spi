@@ -2,6 +2,9 @@
 
 This file records changes between versions.
 
+## 1.1.1
+- switch to rspace-parent 2.1.3 (updates various dependencies)
+
 ## 1.1.0
 - update LicenseDefs: modify some CC license names to match specification + add a few license definitions
 - in pom.xml, switch to latest rspace-parent
