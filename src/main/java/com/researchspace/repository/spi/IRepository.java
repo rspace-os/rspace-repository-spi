@@ -17,7 +17,7 @@ public interface IRepository {
 
 		@Override
 		public RepositoryOperationResult submitDeposit(IDepositor depositor, File toDeposit, SubmissionMetadata metadata, RepositoryConfig repoCfg) {
-			return new RepositoryOperationResult(false, "noops", null);
+			return new RepositoryOperationResult(false, "noops", null, null);
 		}
 		/**
 		 * Perform any configuration on the repository object by clients
@@ -27,7 +27,7 @@ public interface IRepository {
 
 		@Override
 		public RepositoryOperationResult testConnection() {
-			return new RepositoryOperationResult(false, "noops", null);
+			return new RepositoryOperationResult(false, "noops", null, null);
 		}
 
 		@Override

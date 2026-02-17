@@ -1,7 +1,6 @@
 package com.researchspace.repository.spi;
 
 import java.io.File;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +16,7 @@ public class StubRepositoryImpl implements IRepository {
 	public RepositoryOperationResult submitDeposit(IDepositor depositor, File toDeposit, SubmissionMetadata metadata,  RepositoryConfig repoCfg) {
 		log.info("Dummy Repository datafile " + toDeposit.getName() + "submitted by user "
 				+ depositor.getUniqueName());
-		return new RepositoryOperationResult( success, null, null);
+		return new RepositoryOperationResult( success, null, null, null);
 	}
 
 	public String toString (){
@@ -32,7 +31,7 @@ public class StubRepositoryImpl implements IRepository {
 	@Override
 	public RepositoryOperationResult testConnection() {
 		log.info("Testing connection");
-		return new RepositoryOperationResult(success, null, null);
+		return new RepositoryOperationResult(success, null, null, null);
 	}
 
 	@Override
