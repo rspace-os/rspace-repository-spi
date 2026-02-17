@@ -2,6 +2,9 @@
 
 This file records changes between versions.
 
+## 1.1.2
+- Adding DOI link on the Repository result object
+
 ## 1.1.1
 - switch to rspace-parent 2.1.3 (updates various dependencies)
 
