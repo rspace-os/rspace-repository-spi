@@ -2,6 +2,10 @@
 
 This file records changes between versions.
 
+## 2.0.0 2026-07-28
+- Spring 6 / Hibernate 6 / Jakarta namespace migration
+- Switch to rspace-parent 3.0.0
+
 ## 1.1.2
 - Adding DOI link on the Repository result object
 
